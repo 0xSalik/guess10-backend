@@ -1,12 +1,14 @@
 const express = require("express");
 const fs = require("fs");
+const path = require("path");
 const cors = require("cors");
 const app = express();
 const port = 3000;
 app.use(cors());
 
 let categories;
-fs.readFile("./categories.json", "utf8", (err, data) => {
+const file = path.join(process.cwd(), "json", "categories.json");
+fs.readFile(file, "utf8", (err, data) => {
   if (err) throw err;
   categories = JSON.parse(data);
 });
