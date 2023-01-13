@@ -263,7 +263,7 @@ let categories = [
     ],
   },
   {
-    name: "Top 10 Festivals",
+    name: "Top 10 Festivals (US)",
     items: [
       "Carnival",
       "Coachella",
