@@ -6,7 +6,7 @@ const port = 3000;
 app.use(cors());
 
 let categories;
-fs.readFile("categories.json", "utf8", (err, data) => {
+fs.readFile("../categories.json", "utf8", (err, data) => {
   if (err) throw err;
   categories = JSON.parse(data);
 });
