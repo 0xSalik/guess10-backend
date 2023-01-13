@@ -6,14 +6,10 @@ const port = 3000;
 app.use(cors());
 
 let categories;
-fs.readFile(
-  "https://guess10-backend.vercel.app/categories.json",
-  "utf8",
-  (err, data) => {
-    if (err) throw err;
-    categories = JSON.parse(data);
-  }
-);
+fs.readFile("../categories.json", "utf8", (err, data) => {
+  if (err) throw err;
+  categories = JSON.parse(data);
+});
 
 app.get("/api/guess10", (req, res) => {
   const category = categories[Math.floor(Math.random() * categories.length)];
