@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "api/index.js"
+    "start": "node api/index.js"
   },
   "author": "Salik Khan",
   "license": "MIT",
